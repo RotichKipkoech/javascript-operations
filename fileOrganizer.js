@@ -57,13 +57,13 @@ function organizeFiles(directory) {
             break;
         }
 
-        // Create a folder for the file type if it doesn't exist
+        // Create a folder for the file type if it doesn't exist.
         const folderPath = path.join(directory, folderName);
         if (!fs.existsSync(folderPath)) {
           fs.mkdirSync(folderPath);
         }
 
-        // Move the file to the appropriate folder
+        // Move the file to the appropriate folder.
         const newFilePath = path.join(folderPath, file);
         fs.rename(filePath, newFilePath, (err) => {
           if (err) {
