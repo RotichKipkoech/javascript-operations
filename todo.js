@@ -105,5 +105,5 @@ function removeTask() {
   });
 }
 
-// Start the program
+// Run the program
 showMenu();
