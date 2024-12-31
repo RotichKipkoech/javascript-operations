@@ -11,7 +11,7 @@ const rl = readline.createInterface({
 // Path to the to-do list file
 const todoFilePath = 'todo.txt';
 
-// Function to load tasks from the file
+// Function to load task from the file
 function loadTasks() {
   if (fs.existsSync(todoFilePath)) {
     const tasks = fs.readFileSync(todoFilePath, 'utf-8');
@@ -53,7 +53,7 @@ function showMenu() {
   });
 }
 
-// Function to view all tasks
+// Functions to view all tasks
 function viewTasks() {
   const tasks = loadTasks();
   if (tasks.length === 0) {
@@ -67,7 +67,7 @@ function viewTasks() {
   showMenu();
 }
 
-// Function to add a new task
+// Functions to add a new task
 function addTask() {
   rl.question('Enter a new task: ', (task) => {
     const tasks = loadTasks();
@@ -78,7 +78,7 @@ function addTask() {
   });
 }
 
-// Function to remove a task
+// Functions to remove a task
 function removeTask() {
   const tasks = loadTasks();
   if (tasks.length === 0) {
@@ -105,5 +105,5 @@ function removeTask() {
   });
 }
 
-// Run the program
+// Start the program
 showMenu();
