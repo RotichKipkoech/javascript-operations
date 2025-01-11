@@ -27,7 +27,7 @@ def ask_operation():
         print('Thank you for using the calculator!')
         return
     else:
-        print('Invalid choice. Please choose a number between 1 and 5.')
+        print('Invalid choice. Please choose a number between 1 and 5 only.')
         ask_operation()  # Recurse if the input is invalid
 
 # Function to prompt the user for two numbers and perform the operation
